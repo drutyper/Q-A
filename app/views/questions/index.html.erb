@@ -1,0 +1,11 @@
+<p>This is the Questions and Answers page</p>
+
+<ul>
+  <% @questions.each do |q| %>
+  <li>
+    <%= link_to q.title, q %>
+  </li>
+  <% end %>
+</ul>
+
+<%= button_to "Ask New Question", new_question_path, method: :get %>

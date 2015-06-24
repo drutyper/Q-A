@@ -1,0 +1,21 @@
+== README
+
+What does this QA site do?
+
+This site is for users to ask questions they want an answer to. 
+Other users can answer questions that have not found an answer yet.
+OP chooses to pick the best answer and other users can upvote that answer. 
+
+Create tables for Users, Questions, and Answers
+
+User
+t.string :name
+
+
+Questions
+t.string :question
+t.string :user_id
+
+Answers
+t.text :answers
+t.string :user_id
