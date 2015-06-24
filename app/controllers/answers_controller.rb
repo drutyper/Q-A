@@ -6,7 +6,7 @@ class AnswersController < ApplicationController
 
   def create
     answers_params = params[:answer]
-    @answer = Answer.new(
+    @answer = current_user.answers.new(
       title: answers_params[:title])
     if @answer.save
       redirect_to :root, notice: "answer submitted"

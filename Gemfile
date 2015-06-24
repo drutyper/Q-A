@@ -15,7 +15,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem "twitter-bootstrap-rails"
 gem 'bootstrap_form', github: 'bootstrap-ruby/rails-bootstrap-forms'
-
+gem 'devise'
 
 group :development, :test do
   gem 'quiet_assets'

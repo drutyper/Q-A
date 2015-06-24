@@ -5,9 +5,11 @@ class QuestionsController < ApplicationController
   
   def show
     @question = Question.find params[:id]
-    @answer = Answer.find params[:id]
-    #@a = Answer.find params
-    #@a = Answer.select {|a| a[:question_id] = @question}
+    #@answer = Answer.find params[:id]
+
+    @a = @question.answers.all
+
+    # @a = Answer.select {|a| a[:question_id] = @question}
   end
 
   def new

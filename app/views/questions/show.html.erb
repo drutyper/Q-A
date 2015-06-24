@@ -1,3 +1,14 @@
-<h1><%= @question.title %></h1>
+<h3>Question</h3>
+  <h1><%= @question.title %></h1>
+<h3>Answers</h3>
+<ul>
+  <h4><% @a.each do |a| %></h4>
+  <li>
+    <%= a.title %>
+    <br>
+    <h6>created by: <%=a.user.email %></h6>
+  </li>
+  <% end %>
+</ul>
 
-<h1><%= @answer.title %></h1>
+<%= button_to "Answer me!", new_answer_path, method: :get %>
